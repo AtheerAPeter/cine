@@ -197,7 +197,6 @@ main .cover .dim {
 
 .grid {
   margin-top: 50px;
-  /* overflow: hidden; */
 }
 .grid h1 {
   margin-bottom: 30px;
@@ -214,9 +213,14 @@ main .cover .dim {
   display: flex;
   overflow-x: scroll;
   margin-right: calc(-100vw / 2 + 1200px / 2);
+  margin-left: calc(-100vw / 2 + 1200px / 2);
   padding-bottom: 10px;
+  padding-left: calc(100vw / 2 - 1200px / 2);
 }
 
+.cards::-webkit-scrollbar-track {
+  margin-left: calc(100vw / 2 - 1200px / 2);
+}
 .cards::-webkit-scrollbar {
   height: 10px;
 }
@@ -302,7 +306,13 @@ main .cover .dim {
     width: 200px;
   }
   .cards {
-    margin-right: -10px;
+    margin-right: 0;
+    margin-left: auto;
+    padding-left: 0;
+  }
+
+  .cards::-webkit-scrollbar-track {
+    margin-left: 0;
   }
 }
 
